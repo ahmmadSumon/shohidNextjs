@@ -20,7 +20,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-sm mb-6">
-          <p>© 2024 Martyrs' Legacy. All rights reserved.</p>
+          <p>© 2024 Martyrs' Legacy and © Sumon. All rights reserved.</p>
           <p>Designed with love and respect for the fallen heroes.</p>
         </div>
         <div className="text-xs">
