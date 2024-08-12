@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import memorialImg from '../../public/image/syd.png'; // Adjust the path as needed
+import Link from 'next/link';
 
 const MemorialSection = () => {
   return (
@@ -38,12 +39,12 @@ const MemorialSection = () => {
             <p className="text-gray-300 mb-6">
               A brief description of the memorial and its significance.
             </p>
-            <a
-              href="#"
+            <Link
+              href="/honor"
               className="inline-block text-red-500 border border-red-500 py-2 px-6 rounded-full hover:bg-red-500 hover:text-white transition duration-300"
             >
               Learn More
-            </a>
+            </Link>
           </div>
           <div className="bg-gray-900 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
             <div className="relative h-40 mb-6">
@@ -61,12 +62,12 @@ const MemorialSection = () => {
             <p className="text-gray-300 mb-6">
               A brief description of the memorial and its significance.
             </p>
-            <a
-              href="#"
+            <Link
+              href="/honor"
               className="inline-block text-red-500 border border-red-500 py-2 px-6 rounded-full hover:bg-red-500 hover:text-white transition duration-300"
             >
               Learn More
-            </a>
+            </Link>
           </div>
           <div className="bg-gray-900 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
             <div className="relative h-40 mb-6">
@@ -84,12 +85,12 @@ const MemorialSection = () => {
             <p className="text-gray-300 mb-6">
               A brief description of the memorial and its significance.
             </p>
-            <a
-              href="#"
+            <Link
+              href="/honor"
               className="inline-block text-red-500 border border-red-500 py-2 px-6 rounded-full hover:bg-red-500 hover:text-white transition duration-300"
             >
               Learn More
-            </a>
+            </Link>
           </div>
           {/* Add more memorial items as needed */}
         </div>
