@@ -9,6 +9,10 @@ const Nav = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleMenuItemClick = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className="bg-black fixed w-full z-20 top-0 shadow-lg">
       <div className="max-w-6xl mx-auto px-4">
@@ -85,30 +89,33 @@ const Nav = () => {
       <div className={`mobile-menu ${isOpen ? 'block' : 'hidden'} md:hidden`}>
         <ul className="">
           <li>
-            <Link href="/" className="block text-sm px-2 py-4 text-white hover:bg-red-500 transition duration-300">
+            <Link href="/" className="block text-sm px-2 py-4 text-white hover:bg-red-500 transition duration-300" onClick={handleMenuItemClick}>
               Home
             </Link>
           </li>
           <li>
-            <Link href="/stories" className="block text-sm px-2 py-4 text-white hover:bg-red-500 transition duration-300">
+            <Link href="/stories" className="block text-sm px-2 py-4 text-white hover:bg-red-500 transition duration-300" onClick={handleMenuItemClick}>
               Stories
             </Link>
           </li>
           <li>
-            <Link href="/memorial" className="block text-sm px-2 py-4 text-white hover:bg-red-500 transition duration-300">
+            <Link href="/memorial" className="block text-sm px-2 py-4 text-white hover:bg-red-500 transition duration-300" onClick={handleMenuItemClick}>
               Memorial
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="block text-sm px-2 py-4 text-white hover:bg-red-500 transition duration-300">
-              Contact
-            </Link>
-            <Link href="/about" className="block text-sm px-2 py-4 text-white hover:bg-red-500 transition duration-300">
-            About
+            <Link href="/about" className="block text-sm px-2 py-4 text-white hover:bg-red-500 transition duration-300" onClick={handleMenuItemClick}>
+              About
             </Link>
           </li>
           <li>
-            <Link href="/donate" className="block text-sm px-2 py-4 text-white border border-white rounded hover:bg-red-500 transition duration-300">
+            <Link href="/contact" className="block text-sm px-2 py-4 text-white hover:bg-red-500 transition duration-300" onClick={handleMenuItemClick}>
+              Contact
+            </Link>
+          </li>
+          {/* Mobile Donate button */}
+          <li>
+            <Link href="#donate" className="block bg-red-500 text-black font-semibold text-center py-3 px-6 rounded-full hover:bg-white hover:text-red-500 transition duration-300 mx-2 my-4" onClick={handleMenuItemClick}>
               Donate
             </Link>
           </li>
