@@ -27,7 +27,7 @@ const AboutSection = () => {
     : [img1, img2, img3, img4];
 
   return (
-    <section className="bg-black text-white py-24 px-8 md:px-16">
+    <section className= "bg-black text-white py-24 px-8 md:px-16">
       <div className="container mx-auto flex flex-col md:flex-row">
         {/* Text Section */}
         <div className="md:w-1/2 md:pr-8">
