@@ -14,7 +14,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="bg-black fixed w-full z-20 top-0 shadow-lg">
+    <nav className="bg-black fixed w-full z-20 top-0 shadow-lg py-3">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center">
           {/* Logo on the left */}
@@ -57,9 +57,17 @@ const Nav = () => {
           </div>
           {/* Secondary Navbar items on the right */}
           <div className="hidden md:flex items-center space-x-3">
-            <Link href="#donate" className="inline-block bg-red-500 text-black font-semibold py-3 px-6 rounded-full hover:bg-white hover:text-red-500 transition duration-300">
-              Donate
-            </Link>
+          <Link href="/donate">
+  <button className="relative rounded-full px-6 py-3 bg-red-600 text-white text-xl font-medium tracking-wide overflow-hidden group hover:bg-white hover:text-black">
+    <span className="relative z-10 block bg-transparent  transition-transform duration-300 group-hover:-translate-y-10">
+      Donate
+    </span>
+    <span className="absolute inset-0 flex  items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+      Donate
+    </span>
+  </button>
+</Link>
+
           </div>
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
@@ -115,9 +123,16 @@ const Nav = () => {
           </li>
           {/* Mobile Donate button */}
           <li>
-            <Link href="#donate" className="block bg-red-500 text-black font-semibold text-center py-3 px-6 rounded-full hover:bg-white hover:text-red-500 transition duration-300 mx-2 my-4" onClick={handleMenuItemClick}>
+          <Link href="/donate">
+          <button className="relative rounded px-6 py-3 bg-black dark:bg-white dark:text-black  text-white text-sm font-medium tracking-wide overflow-hidden group">
+            <span className="relative z-10 block transition-transform duration-300 group-hover:-translate-y-8">
               Donate
-            </Link>
+            </span>
+            <span className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+             Donate
+            </span>
+          </button>
+          </Link>
           </li>
         </ul>
       </div>

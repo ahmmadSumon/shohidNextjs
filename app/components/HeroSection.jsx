@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 import Image from 'next/image';
 import gsap from 'gsap';
 import img from "../../public/image/syd.png"; // Adjust this path as necessary
-
+import Link from "next/link";
 const HeroSection = () => {
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);
@@ -34,7 +34,7 @@ const HeroSection = () => {
   }, []);
   
   return (
-    <section className="relative  text-white h-screen flex flex-col items-center justify-center overflow-hidden">
+    <section className="relative  text-white min-h-screen flex flex-col items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
        n
@@ -58,13 +58,29 @@ const HeroSection = () => {
         </p>
         
       </div>
-      <a
-       ref={buttonRef}
-          href="#stories"
-          className="z-30 inline-block bg-red-500 text-black font-semibold py-3 px-6 rounded-full hover:bg-white hover:text-red-500 transition duration-300"
-        >
-          Explore Their Stories
-        </a>
+      <div className="flex flex-col md:flex-row gap-5">
+      <Link href="/stories">
+  <button className="relative z-50 rounded-full px-6 py-3 bg-red-600 text-white text-xl font-medium tracking-wide overflow-hidden group hover:bg-white hover:text-black">
+    <span className="relative z-10 block bg-transparent  transition-transform duration-300 group-hover:-translate-y-10">
+     Read Their Stories
+    </span>
+    <span className="absolute inset-0 flex  items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+    Read Their Stories
+    </span>
+  </button>
+</Link>
+<Link href="/donation">
+  <button className="relative z-50 rounded-full px-6 py-3 bg-red-600 text-white text-xl font-medium tracking-wide overflow-hidden group hover:bg-white hover:text-black">
+    <span className="relative z-10 block bg-transparent  transition-transform duration-300 group-hover:-translate-y-10">
+     Give Donation 
+    </span>
+    <span className="absolute inset-0 flex  items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+    Give Donation 
+    </span>
+  </button>
+</Link>
+      </div>
+     
     </section>
   );
 };

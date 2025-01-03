@@ -67,7 +67,7 @@ const AboutSection = () => {
         </div>
 
         {/* Photo Gallery Section */}
-        <div className="md:w-1/2 grid grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="md:w-1/2 grid grid-cols-2 md:grid-cols-2 gap-6">
           {imagesToShow.map((img, index) => (
             <div key={index} className="overflow-hidden rounded-lg shadow-lg">
               <Image
