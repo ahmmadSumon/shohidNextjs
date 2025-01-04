@@ -13,7 +13,7 @@ export function LayoutGridDemo() {
 const SkeletonOne = () => {
     return (
       <div className="cursor-pointer">
-        <h2 className="text-4xl font-bold mb-6 text-green-500">
+        <h2 className="text-xl md:text-4xl font-bold mb-6 text-green-500">
         Sustainability for Future Generations
         </h2>
         <p className="text-lg leading-relaxed mb-6">
@@ -26,7 +26,7 @@ const SkeletonOne = () => {
   const SkeletonTwo = () => {
     return (
       <div className="cursor-pointer">
-        <h2 className="text-4xl font-bold mb-6 text-green-500">
+        <h2 className="text-xl md:text-4xl font-bold mb-6 text-green-500">
           Innovation at the Core
         </h2>
         <p className="text-lg leading-relaxed mb-6">
@@ -39,7 +39,7 @@ const SkeletonOne = () => {
   const SkeletonThree = () => {
     return (
       <div className="cursor-pointer">
-        <h2 className="text-4xl font-bold mb-6 text-green-500">
+        <h2 className="text-xl md:text-4xl font-bold mb-6 text-green-500">
           Empowering Farmers for a Sustainable Future
         </h2>
         <p className="text-lg leading-relaxed mb-6">
@@ -52,7 +52,7 @@ const SkeletonOne = () => {
   const SkeletonFour = () => {
     return (
       <div className="cursor-pointer">
-        <h2 className="text-4xl font-bold mb-6 text-green-500">
+        <h2 className="text-xl md:text-4xl font-bold mb-6 text-green-500">
           Equality for All
         </h2>
         <p className="text-lg leading-relaxed mb-6">

@@ -97,27 +97,27 @@ const Nav = () => {
       <div className={`mobile-menu ${isOpen ? 'block' : 'hidden'} md:hidden`}>
         <ul className="">
           <li>
-            <Link href="/" className="block text-sm px-2 py-4 text-white hover:bg-red-500 transition duration-300" onClick={handleMenuItemClick}>
+            <Link href="/" className="block text-lg px-2 py-4 text-white hover:bg-red-500 transition duration-300" onClick={handleMenuItemClick}>
               Home
             </Link>
           </li>
           <li>
-            <Link href="/stories" className="block text-sm px-2 py-4 text-white hover:bg-red-500 transition duration-300" onClick={handleMenuItemClick}>
+            <Link href="/stories" className="block text-lg px-2 py-4 text-white hover:bg-red-500 transition duration-300" onClick={handleMenuItemClick}>
               Stories
             </Link>
           </li>
           <li>
-            <Link href="/memorial" className="block text-sm px-2 py-4 text-white hover:bg-red-500 transition duration-300" onClick={handleMenuItemClick}>
+            <Link href="/memorial" className="block text-lg px-2 py-4 text-white hover:bg-red-500 transition duration-300" onClick={handleMenuItemClick}>
               Memorial
             </Link>
           </li>
           <li>
-            <Link href="/about" className="block text-sm px-2 py-4 text-white hover:bg-red-500 transition duration-300" onClick={handleMenuItemClick}>
+            <Link href="/about" className="block text-lg px-2 py-4 text-white hover:bg-red-500 transition duration-300" onClick={handleMenuItemClick}>
               About
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="block text-sm px-2 py-4 text-white hover:bg-red-500 transition duration-300" onClick={handleMenuItemClick}>
+            <Link href="/contact" className="block text-lg px-2 py-4 text-white hover:bg-red-500 transition duration-300" onClick={handleMenuItemClick}>
               Contact
             </Link>
           </li>
