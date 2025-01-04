@@ -21,7 +21,7 @@ const Nav = () => {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center py-4 px-2">
               <svg
-                className="h-8 w-8 mr-2 text-white"
+                className="h-8 w-8 mr-2 text-red-600"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -34,7 +34,7 @@ const Nav = () => {
                   d="M5 12h14M12 5l7 7-7 7"
                 />
               </svg>
-              <span className="font-semibold text-white text-xl">BD Martyr's 2024</span>
+              <span className="font-semibold text-red-500 text-xl">BD Martyr's 2024</span>
             </Link>
           </div>
           {/* Centered Navbar items */}
