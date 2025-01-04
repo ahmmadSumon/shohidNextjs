@@ -1,12 +1,14 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import abusayed from '../../public/image/abusayed.jpg'; // Adjust the path as needed
-import mughdho from '../../public/image/mugdho.jpg';
-import shobuj from '../../public/image/shobuj.jpg';
-import shanto from '../../public/image/shanto.jpg';
-import jahiduzzamanTanvir from '../../public/image/jahiduzzamanTanvir.jpg';
-import Freedom from '../../public/image/freedom.jpg';
+"use client";
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion"; // Import Framer Motion
+import abusayed from "../../public/image/abusayed.jpg"; // Adjust the path as needed
+import mughdho from "../../public/image/mugdho.jpg";
+import shobuj from "../../public/image/shobuj.jpg";
+import shanto from "../../public/image/shanto.jpg";
+import jahiduzzamanTanvir from "../../public/image/jahiduzzamanTanvir.jpg";
+import Freedom from "../../public/image/freedom.jpg";
 
 const stories = [
   {
@@ -66,25 +68,37 @@ const StoriesSection = () => {
         <h2 className="text-4xl font-bold text-center mb-12">Martyrs' Stories</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {stories.map((story, index) => (
-            <Link href={`/stories/${story.slug}`} key={index} passHref>
-              <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg group hover:shadow-xl transition-shadow duration-300 cursor-pointer">
-                <div className="relative h-64">
-                  <Image
-                    src={story.image}
-                    alt={story.title}
-                    layout="fill"
-                    objectFit="cover"
-                    quality={100}
-                    className="opacity-75 group-hover:opacity-100 transition-opacity duration-300"
-                  />
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50, scale: 0.9 }} // Animation start state
+              whileInView={{ opacity: 1, y: 0, scale: 1 }} // Animation end state
+              viewport={{ once: true, amount: 0.3 }} // Trigger animation on scroll
+              transition={{
+                duration: 0.6,
+                delay: index * 0.1, // Slight stagger effect
+                ease: "easeOut",
+              }}
+            >
+              <Link href={`/stories/${story.slug}`} passHref>
+                <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg group hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                  <div className="relative h-64">
+                    <Image
+                      src={story.image}
+                      alt={story.title}
+                      layout="fill"
+                      objectFit="cover"
+                      quality={100}
+                      className="opacity-75 group-hover:opacity-100 transition-opacity duration-300"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-2">{story.title}</h3>
+                    <p className="text-sm mb-4">{story.description}</p>
+                    <p className="text-sm italic text-gray-400">{story.Name}</p>
+                  </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">{story.title}</h3>
-                  <p className="text-sm mb-4">{story.description}</p>
-                  <p className="text-sm italic text-gray-400">{story.Name}</p>
-                </div>
-              </div>
-            </Link>
+              </Link>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -426,16 +426,17 @@ const Video = () => {
 
       {videoOpen && (
   <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
-    <iframe
+    <video
       width="560"
       height="315"
-      src="/ShonoMohajon.mp4"
-      title="Video player"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
+      controls
+      autoPlay
+      muted // Mutes the video when it starts playing
       className="rounded-lg"
-    ></iframe>
+    >
+      <source src="/ShonoMohajon.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
     <button
       onClick={() => setvideoOpen(false)}
       className="absolute top-4 right-4 text-white"

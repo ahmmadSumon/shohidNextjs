@@ -57,7 +57,7 @@ const Nav = () => {
           </div>
           {/* Secondary Navbar items on the right */}
           <div className="hidden md:flex items-center space-x-3">
-          <Link href="/donate">
+          <Link href="/contact">
   <button className="relative rounded-full px-6 py-3 bg-red-600 text-white text-xl font-medium tracking-wide overflow-hidden group hover:bg-white hover:text-black">
     <span className="relative z-10 block bg-transparent  transition-transform duration-300 group-hover:-translate-y-10">
       Donate
@@ -123,7 +123,7 @@ const Nav = () => {
           </li>
           {/* Mobile Donate button */}
           <li>
-          <Link href="/donate">
+          <Link href="/contact">
           <button className="relative rounded px-6 py-3 bg-black dark:bg-white dark:text-black  text-white text-sm font-medium tracking-wide overflow-hidden group">
             <span className="relative z-10 block transition-transform duration-300 group-hover:-translate-y-8">
               Donate

@@ -19,7 +19,7 @@ const AboutSection = () => {
   const imagesToShow = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
 
   return (
-    <section className="bg-black text-white py-24 px-8 md:px-16">
+    <section className="bg-black text-white py-28 px-8 md:px-16">
       <div className="container mx-auto flex flex-col md:flex-row">
         {/* Text Section */}
         <div className="md:w-1/2 md:pr-8">
@@ -49,7 +49,7 @@ const AboutSection = () => {
         </div>
 
         {/* Photo Gallery Section */}
-        <div className="md:w-1/2 grid grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="md:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-6">
           {imagesToShow.map((img, index) => (
             <div key={index} className="overflow-hidden rounded-lg shadow-lg">
               <Image

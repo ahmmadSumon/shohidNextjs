@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const MemorialSection = () => {
   return (
-    <section className="relative bg-gray-800 text-white py-20">
+    <section className="relative bg-gray-800 text-white py-28">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image

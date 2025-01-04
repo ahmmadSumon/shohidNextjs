@@ -40,7 +40,7 @@ const DonatePage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Donation Section */}
           <div className=" rounded-xl shadow-lg p-8 lg:p-16 space-y-8">
-            <h3 className="text-2xl font-semibold text-white text-center mb-4">
+            <h3 className="text-2xl font-semibold text-white  mb-4">
               Your contribution can make a real difference in the lives of those affected.
             </h3>
             <p className="text-lg text-whitetext-center mb-6">
@@ -50,7 +50,7 @@ const DonatePage = () => {
             {/* Donation Form */}
             <div className="donation-form space-y-6">
               <div className="flex ">
-                <div className="w-1/2 flex justify-between gap-10">
+                <div className="w-1/2 flex flex-col ">
                   <label htmlFor="donationAmount" className="block text-xl font-semibold text-white mb-2">
                     Enter your donation amount:
                   </label>
@@ -68,22 +68,28 @@ const DonatePage = () => {
               </div>
 
               <div className="flex justify-center">
-                <button className="bg-indigo-600 text-white px-8 py-3 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
-                  Donate ${donationAmount || 'Now'}
-                </button>
+              <button className="relative z-50 rounded-full px-6 py-3 bg-red-600 text-white text-xl font-medium tracking-wide overflow-hidden group hover:bg-white hover:text-black">
+          <span className="relative z-10 block bg-transparent  transition-transform duration-300 group-hover:-translate-y-10">
+          Donate ${donationAmount || 'Now'}
+          </span>
+          <span className="absolute inset-0 flex  items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          Donate ${donationAmount || 'Now'}
+          </span>
+        </button>
+                
               </div>
             </div>
 
             <div className="text-center mt-6 text-gray-500">
               <p className="text-sm">
-                All donations go directly to the victims. For bank transfers or other methods, please contact us.
+                All donations go directly to the victims. For bank transfers or other methods, please contact us.(This is for demo, not to worry about donations)
               </p>
             </div>
           </div>
 
           {/* Contact Form */}
           <div className="contact-form  p-8 rounded-xl shadow-lg">
-            <h4 className="text-2xl font-semibold text-white mb-6 text-center">Have Questions? Reach Out to Us</h4>
+            <h4 className="text-2xl font-semibold text-white mb-6 ">Have Questions? Reach Out to Us</h4>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-lg font-medium text-white mb-2">
@@ -114,7 +120,7 @@ const DonatePage = () => {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-lg font-medium text-gray-700 mb-2">
+                <label htmlFor="message" className="block text-lg font-medium text-white mb-2">
                   Your Message:
                 </label>
                 <textarea
@@ -127,12 +133,14 @@ const DonatePage = () => {
                 />
               </div>
               <div className="flex justify-center">
-                <button
-                  type="submit"
-                  className="bg-green-600 text-white px-8 py-3 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300"
-                >
-                  Submit
-                </button>
+              <button className="relative z-50 rounded-full px-6 py-3 bg-red-600 text-white text-xl font-medium tracking-wide overflow-hidden group hover:bg-white hover:text-black">
+          <span className="relative z-10 block bg-transparent  transition-transform duration-300 group-hover:-translate-y-10">
+          Submit
+          </span>
+          <span className="absolute inset-0 flex  items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          Submit
+          </span>
+        </button>
               </div>
             </form>
           </div>
@@ -142,8 +150,8 @@ const DonatePage = () => {
         <div className="text-center mt-12 text-white">
           <p className="text-sm">
             If you'd prefer to donate via bank transfer or another method, please contact us directly at{' '}
-            <a href="mailto:support@donation.com" className="text-indigo-600 hover:underline">
-              support@donation.com
+            <a href="mailto:arifahmmadsumon@gmail.com" className="text-indigo-600 hover:underline">
+            arifahmmadsumon@gmail.com
             </a>.
           </p>
         </div>

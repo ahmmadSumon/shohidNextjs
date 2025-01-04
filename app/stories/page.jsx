@@ -65,7 +65,7 @@ const stories = [
 
 const StoriesSection = () => {
   return (
-    <section id="stories" className="bg-black text-white py-20">
+    <section id="stories" className="bg-black text-white py-28">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12">
           Martyrs' Stories
